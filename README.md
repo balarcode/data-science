@@ -2,7 +2,7 @@
 
 Practical implementation of selected data science, analysis, characterization and visualization concepts.
 
-# Citation
+## Citation
 
 Please note that the code and technical details made available are for anyone interested to learn. The repo is not open to collaboration for now.
 
