@@ -1,8 +1,8 @@
 ################################################
 # Title     : Sentiment Classifier
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 9th October 2024
+# Version   : 1.1
+# Date      : 6th November 2024
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : The twitter data in the csv file is a not a real data.
@@ -87,8 +87,8 @@ for line in lines[1:]: # Start after the header line
     net_score = (positive_score - negative_score)
     twitter_data.append((vals[1], vals[2], positive_score, negative_score, net_score))
 
-# Populate results in file: resulting_data.csv
-outfile = open(working_directory + "resulting_data.csv", "w")
+# Populate results in file: sentiment_classifier_results.csv
+outfile = open(working_directory + "sentiment_classifier_results.csv", "w")
 outfile.write('Number of Retweets, Number of Replies, Positive Score, Negative Score, Net Score')
 outfile.write('\n')
 for data in twitter_data:
