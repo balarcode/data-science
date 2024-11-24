@@ -6,4 +6,4 @@
 
 ### Predicted Labels (Colored Mesh)
 
-![Predicted Labels](knn_classification_output_v2.png)
+![Predicted Labels](knn_classification_output.png)
