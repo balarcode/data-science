@@ -1,8 +1,8 @@
 ################################################
 # Title     : K-Nearest Neighbors Classification
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 16th November 2024
+# Version   : 1.1
+# Date      : 23rd November 2024
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Given a training set (matrix of real numbers of size = N x D) and
@@ -86,4 +86,5 @@ fig, ax = plt.subplots(figsize=(4, 4))
 ax.pcolormesh(xx, yy, np.array(prediction).reshape(xx.shape), cmap=cmap_light) # Draw a colored plot within the created mesh grid
 ax.scatter(training_data_set[:, 0], training_data_set[:, 1],
            c=training_label_set, cmap=cmap_bold, edgecolor='k', s=20)
+ax.set(xlabel='sepal length (cm)', ylabel='sepal width (cm)')
 # %%
