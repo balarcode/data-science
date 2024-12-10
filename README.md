@@ -4,7 +4,9 @@ Practical implementation of selected data science, analysis, characterization an
 
 ## Concepts
 
-Implementation of mean normalization and standardization of a dataset can be found [here](https://github.com/balarcode/subjects/tree/main/random_process#readme).
+### Feature Scaling
+
+Feature scaling is a method used to normalize the range of independent variables or features of a dataset. In data processing, it is also known as data normalization and is generally performed during the data preprocessing step. Implementation of two of the feature scaling methods, mean normalization and standardization of a dataset can be understood [here](https://github.com/balarcode/subjects/tree/main/random_process#readme).
 
 ## Citation
 
