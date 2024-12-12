@@ -1,6 +1,6 @@
 # data-science
 
-Practical implementation of selected data science, analysis, characterization and visualization concepts.
+Practical implementation of selected algorithms, concepts and techniques from data science, data analysis, data characterization and data visualization topics.
 
 ## Concepts
 
