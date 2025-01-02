@@ -2,6 +2,18 @@
 
 Practical implementation of selected algorithms, concepts and techniques from data science, data analysis, data characterization and data visualization topics.
 
+## Topics
+
+### K-Means Clustering Algorithm
+
+### K-Nearest Neighbors Classification
+
+### Linear Regression using Gradient Descent Algorithm
+
+### Principal Component Analysis Algorithm
+
+### Sentiment Classifier
+
 ## Concepts
 
 ### Feature Scaling
