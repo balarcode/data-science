@@ -2,17 +2,17 @@
 
 ### Training Dataset
 
-![Training Dataset](linear_regression_results/y_versus_x_training_dataset_house_prices.png)
+![Training Dataset](results/y_versus_x_training_dataset_house_prices.png)
 
 ### Target v/s Prediction using Normalized Linear Regression Model
 
-![Model Prediction](linear_regression_results/normalized_linear_regression_model.png)
+![Model Prediction](results/normalized_linear_regression_model.png)
 
 ### Cost v/s Iteration for Normalized Linear Regression Model
 
-![Cost](linear_regression_results/cost_versus_iterations_normalized_linear_regression_model.png)
+![Cost](results/cost_versus_iterations_normalized_linear_regression_model.png)
 
-![Cost Zoomed](linear_regression_results/cost_versus_iterations_zoomed_normalized_linear_regression_model.png)
+![Cost Zoomed](results/cost_versus_iterations_zoomed_normalized_linear_regression_model.png)
 
 ## Citation
 
