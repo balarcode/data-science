@@ -2,7 +2,7 @@
 
 ### Results
 
-Dataset-1: Number of training examples (m): 10 with features: 3 (Deterministic Dataset)
+Dataset-1: Number of training examples (m): 10 with features: 3 (Deterministic Dataset).
 
 **Decision Tree-1**:
 - Depth 0, Root: Split on feature: 2
@@ -13,7 +13,11 @@ Dataset-1: Number of training examples (m): 10 with features: 3 (Deterministic D
         - Left leaf node with indices [8]
         - Right leaf node with indices [2, 3, 6, 9]
 
-Dataset-2: Number of training examples (m): 1000 with features: 7 (Randomized Dataset)
+---------------------------------------------------
+
+Dataset-2: Number of training examples (m): 1000 with features: 7 (Randomized Dataset).
+
+As it can be noticed, there are nodes in the decision tree (for example at depth = 3 and 4) which are split w.r.t. the same feature ID and left and right branches of a node in the decision tree which are split w.r.t. the same feature ID. As an improvement when choosing a feature to split, a random subset of features 'k' from the available 'n' features will allow the algorithm to choose only from the subset of features. This improvement technique is used in random forest algorithm which in fact builds an ensemble of decision trees.
 
 **Decision Tree-2**:
 - Depth 0, Root: Split on feature: 3
