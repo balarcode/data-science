@@ -2,7 +2,7 @@
 
 ### Results
 
-Dataset-1: Number of training examples (m): 10 with features: 3
+Dataset-1: Number of training examples (m): 10 with features: 3 (Deterministic Dataset)
 
 **Decision Tree-1**:
 - Depth 0, Root: Split on feature: 2
@@ -13,7 +13,7 @@ Dataset-1: Number of training examples (m): 10 with features: 3
         - Left leaf node with indices [8]
         - Right leaf node with indices [2, 3, 6, 9]
 
-Dataset-2: Number of training examples (m): 1000 with features: 7
+Dataset-2: Number of training examples (m): 1000 with features: 7 (Randomized Dataset)
 
 **Decision Tree-2**:
 - Depth 0, Root: Split on feature: 3
