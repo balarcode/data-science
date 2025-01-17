@@ -12,3 +12,9 @@ Number of training examples (m): 10 with features: 3
     - Depth 1, Right: Split on feature: 1
         - Left leaf node with indices [8]
         - Right leaf node with indices [2, 3, 6, 9]
+
+## Citation
+
+Please note that the code and technical details made available are for anyone interested to learn. The repo is not open for collaboration.
+
+If you happen to use the code from this repo, please cite my user name along with link to my profile: https://github.com/balarcode. Thank you!
