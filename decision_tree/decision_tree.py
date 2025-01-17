@@ -1,8 +1,8 @@
 ################################################
 # Title     : Decision Tree Learning Algorithm
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 16th January 2025
+# Version   : 1.1
+# Date      : 17th January 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : A decision tree represents a function that takes a vector of feature values as an input and returns a "decision"
@@ -11,8 +11,8 @@
 #             For inference, a decision tree would output the predicted or inferred value at the leaf node.
 #             In this file, a decision tree learning algorithm is implemented for a multi-dimensional structured dataset considering
 #             one hot encoding of the dataset and using concepts of entropy, information gain and optimal node splitting.
-#             A discrete labeled dataset of three features for each training example is considered in order to build the decision
-#             tree in this file. The three features are denoted as 0, 1 and 2.
+#             A discrete labeled dataset of seven features for each training example is considered in order to build the decision
+#             tree in this file. The seven features are denoted as 0 through 7.
 #
 # All Rights Reserved.
 ################################################
@@ -22,20 +22,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # One hot encoded dataset
-# X_train contains three features for each of the training example
-X_train = np.array([[1,1,1],
-                    [1,0,1],
-                    [1,0,0],
-                    [1,0,0],
-                    [1,1,1],
-                    [0,1,1],
-                    [0,0,0],
-                    [1,0,1],
-                    [0,1,0],
-                    [1,0,0]])
+# X_train contains features = num_features for each of the training examples
+num_data_points = 1000
+num_features = 7
+random = np.random.RandomState(0)
+X_train = random.choice([0, 1], size=(num_data_points, num_features), p=[1./2, 1./2])
 
 # y_train contains the ground truth labels (either 1 or 0) for each of the training examples
-y_train = np.array([1, 1, 0, 0, 1, 0, 0, 1, 1, 0])
+y_train = random.choice([0, 1], size=(num_data_points, ), p=[1./2, 1./2])
 
 print ('The shape of X_train is:', X_train.shape)
 print ('The shape of y_train is: ', y_train.shape)
@@ -141,5 +135,6 @@ def decision_tree(X, y, node_indices, branch_name, max_depth, current_depth):
 # Build the Decision Tree
 ################################################
 tree = []
-root_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-decision_tree(X_train, y_train, root_indices, "Root", max_depth=2, current_depth=0)
+root_indices = []
+for i in range(num_data_points): root_indices.append(i)
+decision_tree(X_train, y_train, root_indices, "Root", max_depth=5, current_depth=0)
