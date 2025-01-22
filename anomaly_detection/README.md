@@ -31,3 +31,9 @@ To design the anomaly detection learning algorithm for a higher dimensional data
 ![p_x9](results/p_x9.png)
 
 ![p_x10](results/p_x10.png)
+
+## Citation
+
+Please note that the code and technical details made available are for anyone interested to learn. The repo is not open for collaboration.
+
+If you happen to use the code from this repo, please cite my user name along with link to my profile: https://github.com/balarcode. Thank you!
