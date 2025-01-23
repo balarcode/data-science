@@ -4,6 +4,10 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ## Topics
 
+### Anomaly Detection Algorithm
+
+### Decision Tree Learning Algorithm
+
 ### K-Means Clustering Algorithm
 
 ### K-Nearest Neighbors Classification
