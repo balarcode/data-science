@@ -10,7 +10,7 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ### K-Means Clustering Algorithm
 
-### K-Nearest Neighbors Classification
+### K-Nearest Neighbors Classification Algorithm
 
 ### Linear Regression using Gradient Descent Algorithm
 
