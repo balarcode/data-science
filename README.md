@@ -14,6 +14,8 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ### Linear Regression using Gradient Descent Algorithm
 
+### Regularized Logistic Regression Algorithm
+
 ### Principal Component Analysis Algorithm
 
 ### Sentiment Classifier
