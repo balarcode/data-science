@@ -1,7 +1,7 @@
 ################################################
 # Title     : Collaborative Filtering Algorithm
 # Author    : balarcode
-# Version   : 1.0
+# Version   : 1.1
 # Date      : 30th January 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
@@ -151,7 +151,7 @@ optimizer = tf.keras.optimizers.Adam(learning_rate=alpha)
 X, W, b = gradient_descent_algorithm(X, W, b, Ynorm, R, iterations, lambda_)
 
 # %%
-# Prediction or Inference
+# Prediction or Inference (Initial Recommendations for a New User)
 
 # Predict ratings using learned parameters: weights W, biases b and feature vectors in X
 p = np.matmul(X.numpy(), np.transpose(W.numpy())) + b.numpy()
@@ -167,5 +167,79 @@ ix = tf.argsort(predictions, direction='DESCENDING')
 filter = (movie_list_df["number of ratings"] > 20)
 movie_list_df["predictions"] = predictions
 movie_list_df = movie_list_df.reindex(columns=["predictions", "mean rating", "number of ratings", "title"])
-movie_list_df.loc[ix[:]].loc[filter].sort_values("mean rating", ascending=False)
+output1 = movie_list_df.loc[ix[:500]].loc[filter].sort_values("mean rating", ascending=False)
+
+# %%
+# Include new ratings from the new user for movies watched from the catalogue
+# New user has watched some of the movies from the initial recommendation list and has rated below.
+
+new_user_ratings = np.zeros(num_movies)
+
+new_user_ratings[2173] = 5   # WALL·E (2008)
+new_user_ratings[2609] = 2   # Persuasion (2007)
+new_user_ratings[929]  = 5   # Lord of the Rings: The Return of the King, The (2003)
+new_user_ratings[246]  = 2   # Shrek (2001)
+new_user_ratings[2716] = 5   # Inception (2010)
+new_user_ratings[3618] = 5   # Interstellar (2014)
+new_user_ratings[5]    = 2   # Boondock Saints, The (2000)
+new_user_ratings[622]  = 5   # Harry Potter and the Chamber of Secrets (2002)
+new_user_ratings[988]  = 3   # Eternal Sunshine of the Spotless Mind (2004)
+new_user_ratings[2925] = 1   # Louis Theroux: Law & Disorder (2008)
+new_user_ratings[1318] = 1   # Howl's Moving Castle (Hauru no ugoku shiro) (2004)
+new_user_ratings[793]  = 4   # Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+new_user_ratings[5]    = 5   # Gladiator (2000)
+new_user_ratings[3304] = 5   # Life of Pi (2012)
+
+# Add new user ratings to ratings matrix, Y
+Y = np.c_[new_user_ratings, Y]
+
+# Add new user indicator matrix to R
+R = np.c_[(new_user_ratings != 0).astype(int), R]
+
+# %%
+# Collaborative Filtering Algorithm with New User Ratings
+
+# Normalize the dataset
+Ymean = (np.sum(Y*R, axis=1) / (np.sum(R, axis=1)+1e-12)).reshape(-1, 1)
+Ynorm = Y - np.multiply(Ymean, R)
+
+iterations = 200 # Number of iterations
+lambda_ = 1 # Regularization parameter
+alpha = 1e-1 # Learning rate
+
+# Initialize the parameters for gradient descent algorithm as Tensor variables with random values
+tf.random.set_seed(1234)
+num_movies, num_users = Y.shape
+num_features = 100 # Train for a large number of features more than the baseline features in 'n'
+W = tf.Variable(tf.random.normal((num_users,  num_features), dtype=tf.float64), name='W')
+X = tf.Variable(tf.random.normal((num_movies, num_features), dtype=tf.float64), name='X')
+b = tf.Variable(tf.random.normal((1,          num_users),    dtype=tf.float64), name='b')
+
+# Instantiate the optimizer
+optimizer = tf.keras.optimizers.Adam(learning_rate=alpha)
+
+# Run gradient descent algorithm
+X, W, b = gradient_descent_algorithm(X, W, b, Ynorm, R, iterations, lambda_)
+
+# %%
+# Prediction or Inference (Updated Recommendations for a New User)
+
+# Predict ratings using learned parameters: weights W, biases b and feature vectors in X
+p = np.matmul(X.numpy(), np.transpose(W.numpy())) + b.numpy()
+
+# Restore the mean which was normalized earlier
+pm = p + Ymean
+
+predictions = pm[:, 0]
+
+# Sort predictions
+ix = tf.argsort(predictions, direction='DESCENDING')
+
+filter = (movie_list_df["number of ratings"] > 20)
+movie_list_df["predictions"] = predictions
+movie_list_df = movie_list_df.reindex(columns=["predictions", "mean rating", "number of ratings", "title"])
+output2 = movie_list_df.loc[ix[:500]].loc[filter].sort_values("mean rating", ascending=False)
+# frames = [output2, output1]
+# result = pd.concat(frames)
+# result = result.drop_duplicates(subset=["title"], keep=False)
 # %%
