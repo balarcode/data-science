@@ -6,6 +6,8 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ### Anomaly Detection Algorithm
 
+### Collaborative Filtering Algorithm
+
 ### Decision Tree Learning Algorithm
 
 ### K-Means Clustering Algorithm
