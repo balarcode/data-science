@@ -1,8 +1,16 @@
 ## Collaborative Filtering Algorithm for a Recommender System
 
-### Prediction or Inference from the model trained with Collaborative Filtering Algorithm
+### Updated Recommendations for a New User
 
-[Predictions](results/predictions.csv) 
+After the new user has watched few movies including some of the recommended ones from the initial recommendation list and has rated those movies, the recommender system then updates the recommendation list for the new user by rerunning the collaborative filtering algorithm incorporating the new user's new movie ratings. It can be seen that the recommender system has improved in terms of the predicted movie ratings and is able to recommend more movies of similar ratings to the new user. This was possible by learning W and b parameters specific to the new user.
+
+[Updated Recommendations](results/updated_recommendations_for_new_user.csv)
+
+### Initial Recommendations for a New User
+
+The new user is yet to watch and rate movies in the movie catalogue. The recommender system provides a list of initial recommendations that the new user might want to watch based on the learning from previously provided movie ratings by different users to the movies in the movie catalogue.
+
+[Initial Recommendations](results/initial_recommendations_for_new_user.csv)
 
 ### Training Loss of the Model for Updated Recommendations
 
