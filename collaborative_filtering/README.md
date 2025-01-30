@@ -1,8 +1,23 @@
 ## Collaborative Filtering Algorithm for a Recommender System
 
-### Prediction or Inference from a model trained with Collaborative Filtering Algorithm
+### Prediction or Inference from the model trained with Collaborative Filtering Algorithm
 
 [Predictions](results/predictions.csv) 
+
+
+### Training Loss of the Model
+
+- Training loss at iteration 0: 2287998.9
+- Training loss at iteration 20: 132726.4
+- Training loss at iteration 40: 49977.3
+- Training loss at iteration 60: 23645.4
+- Training loss at iteration 80: 13123.3
+- Training loss at iteration 100: 8205.2
+- Training loss at iteration 120: 5642.8
+- Training loss at iteration 140: 4209.9
+- Training loss at iteration 160: 3368.3
+- Training loss at iteration 180: 2854.8
+
 
 ## Citation
 
