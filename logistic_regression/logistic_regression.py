@@ -1,7 +1,7 @@
 ################################################
 # Title     : Regularized Logistic Regression Algorithm
 # Author    : balarcode
-# Version   : 1.0
+# Version   : 1.1
 # Date      : 29th January 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
@@ -52,9 +52,9 @@ negative = y_training[:] == 0
 
 plt.plot(X_training[positive, 0], X_training[positive, 1], 'k+', label="Accepted")
 plt.plot(X_training[negative, 0], X_training[negative, 1], 'yo', label="Rejected")
-plt.ylabel('Microchip Test-2')
-plt.xlabel('Microchip Test-1')
-plt.title('Quality assurance test results for microchips from a fabrication plant')
+plt.ylabel('x2')
+plt.xlabel('x1')
+plt.title('Plot of Dataset with Baseline Features x1 and x2')
 plt.legend(loc="upper right")
 plt.show()
 
@@ -270,8 +270,8 @@ negative = y_training[:] == 0
 plt.plot(X_mapped[positive, 0], X_mapped[positive, 1], 'k+', label="y=1")
 plt.plot(X_mapped[negative, 0], X_mapped[negative, 1], 'yo', label="y=0")
 plot_decision_boundary(w_opt, b_opt, X_mapped)
-plt.ylabel('Microchip Test-2')
-plt.xlabel('Microchip Test-1')
+plt.ylabel('x2')
+plt.xlabel('x1')
 plt.title('Predictions from Regularized Logistic Regression Model')
 plt.legend(loc="upper right")
 plt.show()
