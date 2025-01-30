@@ -4,8 +4,20 @@
 
 [Predictions](results/predictions.csv) 
 
+### Training Loss of the Model for Updated Recommendations
 
-### Training Loss of the Model
+- Training loss at iteration 0: 2321306.4
+- Training loss at iteration 20: 136156.8
+- Training loss at iteration 40: 51863.4
+- Training loss at iteration 60: 24601.0
+- Training loss at iteration 80: 13632.7
+- Training loss at iteration 100: 8489.4
+- Training loss at iteration 120: 5808.9
+- Training loss at iteration 140: 4312.6
+- Training loss at iteration 160: 3436.2
+- Training loss at iteration 180: 2903.0
+
+### Training Loss of the Model for Initial Recommendations
 
 - Training loss at iteration 0: 2287998.9
 - Training loss at iteration 20: 132726.4
