@@ -4,11 +4,11 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ## Topics
 
-### Anomaly Detection Algorithm
+### [Anomaly Detection Algorithm](https://github.com/balarcode/data-science/tree/main/anomaly_detection)
 
-### Collaborative Filtering Algorithm
+### [Collaborative Filtering Algorithm](https://github.com/balarcode/data-science/tree/main/collaborative_filtering)
 
-### Decision Tree Learning Algorithm
+### [Decision Tree Learning Algorithm](https://github.com/balarcode/data-science/tree/main/decision_tree)
 
 ### K-Means Clustering Algorithm
 
