@@ -10,17 +10,17 @@ Practical implementation of selected algorithms, concepts and techniques from da
 
 ### [Decision Tree Learning Algorithm](https://github.com/balarcode/data-science/tree/main/decision_tree)
 
-### K-Means Clustering Algorithm
+### [K-Means Clustering Algorithm](https://github.com/balarcode/data-science/tree/main/k_means_clustering)
 
-### K-Nearest Neighbors Classification Algorithm
+### [K-Nearest Neighbors Classification Algorithm](https://github.com/balarcode/data-science/tree/main/k_nearest_neighbors)
 
-### Linear Regression using Gradient Descent Algorithm
+### [Linear Regression using Gradient Descent Algorithm](https://github.com/balarcode/data-science/tree/main/linear_regression)
 
-### Regularized Logistic Regression Algorithm
+### [Regularized Logistic Regression Algorithm](https://github.com/balarcode/data-science/tree/main/logistic_regression)
 
-### Principal Component Analysis Algorithm
+### [Principal Component Analysis Algorithm](https://github.com/balarcode/data-science/tree/main/principal_component_analysis)
 
-### Sentiment Classifier
+### [Sentiment Classifier](https://github.com/balarcode/data-science/tree/main/sentiment_classifier)
 
 ## Concepts
 
