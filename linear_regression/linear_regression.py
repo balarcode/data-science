@@ -1,8 +1,8 @@
 ################################################
 # Title     : Linear Regression
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 14th December 2024
+# Version   : 1.1
+# Date      : 10th August 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Linear regression for multiple input features in a dataset is implemented in this source file.
@@ -81,9 +81,14 @@ def gradient_descent_algorithm(X, y, w_in, b_in, cost_function, gradient_functio
 
     for i in range(num_iterations):
         # Compute the gradient
+        # NOTE: At any given point, the computed gradient is a vector that points in the direction of the 
+        # function's steepest local increase. It can be said that the gradient points to the maximum (i.e.
+        # one of local maximas or global maximum).
         dj_db, dj_dw = gradient_function(X, y, w, b)
 
         # Update parameters w and b using alpha and computed gradients
+        # NOTE: Including a negative sign for the gradient directs the gradient vector towards the minimum
+        # so that the function's local minima or global minimum is found when the gradient becomes zero.
         w = w - alpha * dj_dw
         b = b - alpha * dj_db
 
