@@ -1,5 +1,9 @@
 ## Decision Tree Learning Algorithm
 
+Maximizing the information gain is the objective in a decision tree learning algorithm. Information gain conveys the reduction in entropy that one can get by making a spit for a feature at a node in the tree. Entropy is a measure of impurity among the positive or correct examples in the dataset.
+
+In decision tree learning algorithm, information gain for all possible features is evaluated and the feature with highest information gain is chosen at the root node of the tree to begin with. After that, the dataset is split recursively according to the feature that yields highest information gain on both left and right branches at a node. The splitting process will have to be governed by a set criteria to whether continue or stop the splitting process.
+
 ### Results
 
 Dataset-1: Number of training examples (m): 10 with features: 3 (Deterministic Dataset).
