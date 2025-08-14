@@ -1,6 +1,6 @@
 ## Classification using K-Nearest Neighbors Algorithm
 
-Note that pairwise distance refers to the distance calculated between all possible pairs of data points in a dataset. In the implementation in k_nearest_neighbors.py, Euclidean distance is chosen as the distance metric. The pairwise distances can be organized into a pairwise distance matrix, where the rows and columns represent the data points in a dataset. The value at the intersection of row 'i' and column 'j' in the matrix represents the distance between datapoint 'i' and datapoint 'j'.
+Note that pairwise distance refers to the distance calculated between all possible pairs of data points in a dataset. In the implementation in k_nearest_neighbors.py, Euclidean distance is chosen as the distance metric. The pairwise distances for all the possible pairs of data points can be organized into a pairwise distance matrix, where the rows and columns represent the data points in a dataset. The value at the intersection of row 'i' and column 'j' in the matrix represents the distance between data point 'i' and data point 'j'.
 
 
 ### Training Dataset
