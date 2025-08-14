@@ -1,5 +1,7 @@
 ## Classification using K-Nearest Neighbors Algorithm
 
+Note that pairwise distance refers to the distance calculated between all possible pairs of data points in a dataset.
+
 ### Training Dataset
 
 ![Training Dataset](input.png)
