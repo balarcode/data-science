@@ -32,4 +32,7 @@ Feature scaling is a method used to normalize the range of independent variables
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
 
-If you happen to use the code from this repo, please cite my user name along with link to my profile: https://github.com/balarcode. Thank you!
+If you happen to use the code from this repo, please use the below citation to cite. Thank you!
+
+balarcode (2026). *GitHub - balarcode/data-science: Practical implementation of selected algorithms, concepts and techniques from data science, data analysis, data characterization and data visualization topics.* GitHub. https://github.com/balarcode/data-science
+
